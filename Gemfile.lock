@@ -1,6 +1,15 @@
+GIT
+  remote: git://github.com/everypolitician/everypoliticianbot.git
+  revision: 736835a753e2f0b88fe51ff186d4831ee5b56797
+  specs:
+    everypoliticianbot (0.1.0)
+      git (~> 1.2)
+      octokit (~> 4.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.3.8)
     celluloid (0.17.2)
       celluloid-essentials
       celluloid-extras
@@ -20,8 +29,14 @@ GEM
       timers (>= 4.1.1)
     connection_pool (2.2.0)
     dotenv (2.0.2)
+    faraday (0.9.2)
+      multipart-post (>= 1.2, < 3)
+    git (1.2.9.1)
     hitimes (1.2.3)
     json (1.8.3)
+    multipart-post (2.0.0)
+    octokit (4.1.1)
+      sawyer (~> 0.6.0, >= 0.5.3)
     puma (2.14.0)
     rack (1.6.4)
     rack-protection (1.5.3)
@@ -29,6 +44,9 @@ GEM
     redis (3.2.1)
     redis-namespace (1.5.2)
       redis (~> 3.0, >= 3.0.4)
+    sawyer (0.6.0)
+      addressable (~> 2.3.5)
+      faraday (~> 0.8, < 0.10)
     sidekiq (3.5.2)
       celluloid (~> 0.17.2)
       connection_pool (~> 2.2, >= 2.2.0)
@@ -48,6 +66,7 @@ PLATFORMS
 
 DEPENDENCIES
   dotenv
+  everypoliticianbot!
   puma
   sidekiq
   sinatra

@@ -23,9 +23,7 @@ post '/' do
       #=========================================
       # FIXME DEBUG: only do the Vatican for now (because: small data set)
       # FIXME DEBUG: otherwise this is a lot of activity every time it's run
-      if ! /Vatican/.match(country['name'])
-        next
-      end
+      next unless country['name'].include? 'Vatican'
       #=========================================
 
       for legislature in country['legislatures']
